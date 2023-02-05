@@ -2,6 +2,10 @@ import './style.css';
 
 import * as THREE from 'three';
 
+import earthImg from './assets/jpeg/earth.jpg';
+import earthNightImg from './assets/jpeg/earth-night.jpg';
+import sunImg from './assets/jpeg/sun.jpg';
+
 // scene and camera
 
 const scene = new THREE.Scene();
@@ -51,7 +55,7 @@ Array(200).fill().forEach(addStar);
 
 // planets
 
-const earthTexture = new THREE.TextureLoader().load('/assets/jpeg/earth.jpg');
+const earthTexture = new THREE.TextureLoader().load(earthImg);
 
 const earth = new THREE.Mesh(
 	new THREE.SphereGeometry(3, 128, 128),
@@ -66,7 +70,7 @@ earth.position.set(10, -5, -15);
 
 // sun
 
-const sunTexture = new THREE.TextureLoader().load('/assets/jpeg/sun.jpg');
+const sunTexture = new THREE.TextureLoader().load(sunImg);
 
 const sun = new THREE.Mesh(
 	new THREE.SphereGeometry(50, 128, 128),
