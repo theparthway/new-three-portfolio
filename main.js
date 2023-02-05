@@ -51,7 +51,7 @@ Array(200).fill().forEach(addStar);
 
 // planets
 
-const earthTexture = new THREE.TextureLoader().load('earth.jpg');
+const earthTexture = new THREE.TextureLoader().load('/assets/jpeg/earth.jpg');
 
 const earth = new THREE.Mesh(
 	new THREE.SphereGeometry(3, 128, 128),
@@ -66,7 +66,7 @@ earth.position.set(10, -5, -15);
 
 // sun
 
-const sunTexture = new THREE.TextureLoader().load('sun.jpg');
+const sunTexture = new THREE.TextureLoader().load('/assets/jpeg/sun.jpg');
 
 const sun = new THREE.Mesh(
 	new THREE.SphereGeometry(50, 128, 128),
