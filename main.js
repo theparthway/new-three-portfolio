@@ -100,6 +100,18 @@ sun.position.set(130, -5, -15);
 // moon.position.setY(-10);
 // moon.position.setZ(-10);
 
+// kanye
+
+const quote = document.querySelector(".kanye");
+
+fetch('https://api.kanye.rest/')
+  .then((response) => response.json())
+  .then((data) => {
+	console.log(data.quote);
+	quote.textContent = data.quote;
+});
+
+
 
 function moveCamera() {
 	const t = document.body.getBoundingClientRect().top;
