@@ -1,0 +1,78 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#app {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  color: white;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+header {
+  grid-column: 2 / span 5;
+  font-size: 2rem;
+  margin: 5rem 10rem 25rem 10rem;
+}
+
+footer {
+  grid-column: 2 / span 5;
+  font-size: 2rem;
+  margin: 5rem 10rem;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 5rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 3rem;
+  color: rgb(209, 197, 173);
+}
+
+a {
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-weight: lighter;
+  font-size: x-large;
+}
+
+section {
+  grid-column: 2 / span 10;
+  background-color: hsl(88, 25%, 11%, 0.5);
+  padding: 1rem 5rem;
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+.project {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.top-section {
+  border-radius: 5rem 5rem 0 0;
+}
+
+.bottom-section {
+  border-radius: 0 0 5rem 5rem;
+}
