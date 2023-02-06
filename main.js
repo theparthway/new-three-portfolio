@@ -19,8 +19,11 @@ loadingManager.onProgress = (url, loaded, total) => {
 
 loadingManager.onLoad = () => {
 	console.log("loaded");
-	progressBar.style.visibility = "hidden";
-	progressLabel.style.visibility = "hidden";
+
+	progressBar.style.display = "none";
+	progressLabel.style.display = "none";
+	// progressBar.style.visibility = "hidden";
+	// progressLabel.style.visibility = "hidden";
 }
 
 // scene and camera
