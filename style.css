@@ -14,7 +14,7 @@ canvas {
   position: absolute;
   color: white;
   width: 100%;
-  margin: 0px auto;
+  margin: 0px;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -111,7 +111,7 @@ section {
   section {
     text-align: center;
     grid-column: 2 / span 10;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
 
   .footer {
@@ -125,6 +125,7 @@ section {
 
   .project {
     flex-direction: column;
+    padding: 0;
   }
 
   a {
