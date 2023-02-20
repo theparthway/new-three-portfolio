@@ -27,6 +27,11 @@ var ist = new Date(currentTime.getTime() + (ISTOffset + currentOffset)*60000);
 // let hour = ist.getHours();
 // let minute = ist.getMinutes();
 
+let color1 = "black";
+let color2 = "aqua";
+let color3 = "blue";
+let color4 = "lavender";
+
 let hour = ist.getHours();
 let minute = ist.getMinutes();
 let day = ist.getDay();
@@ -62,17 +67,18 @@ function setLabels() {
         let hourParam = hours.indexOf(hour);
         if (minute < 30 && hourParam != -1) hourParam -= 1;
         for (let i=0;i<10;i++) {
-            cols[i].textContent = timings[i] + " | " + tt[secParam][i + 1];
-            if (hourParam > i) cols[i].style.color = "#2EB086";
+            // cols[i].textContent = timings[i] + " | " + tt[secParam][i + 1];
+            cols[i].textContent = tt[secParam][i + 1];
+            if (hourParam > i) cols[i].style.color = color4;
         }
         if ((hour == 18 && minute > 30) || (hour == 8 && minute < 30)) return;
         if (hourParam != -1 && day == ist.getDay()) {
-            cols[hourParam].style.color = "#B8405E";
+            cols[hourParam].style.color = color1;
             cols[hourParam].textContent = "➙  " + cols[hourParam].textContent;
         }
         if (day != ist.getDay()) {
             for (let i=0;i<9;i++) {
-                cols[i].style.color = "#313552";
+                cols[i].style.color = color2;
             }
         }
     } else {
@@ -98,11 +104,11 @@ function changeButton(old_button, new_button) {
     // console.log("old: " + old_button.textContent);
     // console.log("new: " + new_button.textContent);
     if (old_button) {
-        old_button.style.color = "#EEE6CE";
-        old_button.style.backgroundColor = "#B8405E";
+        old_button.style.color = color1;
+        old_button.style.backgroundColor = color2;
     }
-    new_button.style.color = "#B8405E";
-    new_button.style.backgroundColor = "#EEE6CE";
+    new_button.style.color = color1;
+    new_button.style.backgroundColor = color3;
 }
 
 setLabels();
