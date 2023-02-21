@@ -1,17 +1,10 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
-
-  --zero: black;
-  --one: #0a0708;
-  --two: #444444;
-  --three: #747474;
-  --four: #b1b1b1;
-  --five: white;
 }
 
 body {
-  background-color: lightblue;
+  background-color: black;
   margin: 0;
   padding: 0;
 }
@@ -19,10 +12,8 @@ body {
 .header {
   display: block;
   width: 100%;
-  text-decoration: none;
   text-align: center;
-  background-color: var(--four);
-  color: var(--one);
+  background-color: white;
   cursor: pointer;
 }
 
@@ -35,19 +26,14 @@ body {
 }
 
 .container > div {
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--one);
-  color: var(--five);
+  background-color: purple;
   margin: 0.5rem;
   padding: 2rem;
   text-align: center;
   border-radius: 1rem;
-}
-
-.current {
-  background-color: var(--one);
-  color: var(--four);
 }
 
 .year {
@@ -64,22 +50,17 @@ body {
 p {
   margin: 0;
   font-size: x-large;
-  color: var(--one);
+  color: black;
 }
 
 button {
   padding: 1vh 2.5vw;
   font-size: large;
-  background-color: var(--five);
+  background-color: aqua;
   border: none;
   margin: 0.5rem;
   border-radius: 1rem;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: var(--one);
-  color: var(--four);
 }
 
 @media (max-width: 800px) {
@@ -93,7 +74,7 @@ button:hover {
   .container > div {
     margin: 0.25rem;
     padding: 0.1rem;
-    color: var(--three);
+    color: white;
   }
 
   .input {
